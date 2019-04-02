@@ -1,33 +1,217 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.outter_box {
+  width: 80%;
+  height: 10vh;
+  background: lightblue;
+  border: 1px solid black;
 }
+.inner_box {
+  width: 80%;
+  height: 5vh;
+  background: lightyellow;
+  border: 1px solid black;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.float {
+  float: right;
+}
+.display {
+  display: block
+}
+.font {
+  display: inline;
+  font-weight: bold;
+  color: darkred;
+  font-size: 30px;
+  background-color: lightgreen;
+}
+.background_image {
+  background-image: url("https://cdn.pixabay.com/photo/2018/06/30/09/31/background-image-3507320__340.jpg");
+  width: 300px;
+  height: 300px;
+}
+.background_image p{
+  font-weight: bolder;
+  background: white;
+  opacity: .8
+}
+.position_box {
+  border: 1px solid black;
+  height: 10vh;
+  width: 10vw;
+  margin-left: 10%;
+  padding: .5%;
+  background: rgb(236, 236, 236);
+}
+.relative {
+  border: 2px solid black;
+  background: white;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.absolute {
+  border: 2px solid black;
+  background: white;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  position: absolute;
+  top: 1%;
+  right:1%
+}
+.fixed {
+  border: 2px solid black;
+  background: white;
+  height: fit-content;
+  width: fit-content;
+  padding: 5px;
+  position: fixed;
+  opacity: .5;
+}
+.selectors {
+  width: auto;
+  height: fit-content;
+  background:lavender;
+  border: 1px solid black;
+}
+.selectors_title {
+  font-weight: bold;
+}
+.selectors_dot {
+  width: fit-content;
+  height: fit-content;
+  border: .5px dotted black;
+  margin: 5px;
+  padding: 3px;
+}
+#selectors_id {
+  width: fit-content;
+  height: fit-content;
+  border: 2px inset lightgray;
+  margin: 5px;
+  padding: 3px;
+}
+.selectors_explanation {
+  font-size: 1%
+}
+span > span {
+  color: red;
+}
+div + p {
+  text-decoration: underline;
+}
+.animations {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+  top:30%;
+  left: 45%;
+  background-image: linear-gradient(to bottom right, lightblue, navy) ;
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 5px 7px lightgrey;
 }
-
-.App-link {
-  color: #61dafb;
+@keyframes background_keyframe {
+  0% {background-color: lightyellow}
+  50% {background-color: lightpink}
+  100% {background-color: lightyellow}
 }
+.keyframe_box {
+  height: fit-content;
+  width: fit-content;
+  border: 1px solid red;
+  animation-name: background_keyframe;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.keyframe_box:hover{
+  text-decoration: underline;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.transition_box {
+  width: 70%;
+  height: fit-content;
+  background-color: lightseagreen;
+  border: 1px solid royalblue;
+  transition: width 2s, background-color 3s;
+}
+.transition_box:hover {
+  width:100%;
+  background-color: darkseagreen;
+  text-decoration: underline;
+}
+.transform_box {
+  width: 100%;
+  height: fit-content;
+  background: aquamarine;
+  border: 1px solid black;
+  animation-duration: 1.5s
+}
+.transform_box:hover{
+  transition-duration: 1s;
+  transform: rotate(1turn);
+  text-decoration: underline;
+}
+.grid {
+  width: auto;
+  height: 400px;
+  border: 2px solid black;
+  margin: 2px;
+  display: grid;
+  grid-template-areas: 
+    'header header header header right right'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+}
+.item1 {
+  grid-area: header;
+}
+.item2 {
+  grid-area: menu;
+}
+.item3 {
+  grid-area: main;
+}
+.item4 {
+  grid-area: right;
+}
+.item5 {
+  grid-area: footer;
+}
+.grid > div {
+  background-color: blanchedalmond;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+footer {
+  border: 1px solid black
+}
+.pic {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top:5px;
+  left: 5px
+}
+.pic_p {
+  position: absolute;
+  top:95px;
+  left: 5px
+}
+.vid_container {
+  width: 250px;
+  height: 200px;
 }
